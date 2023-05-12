@@ -13,10 +13,13 @@ int quarters;
 int dimes;
 int nickles;
 int pennies;
+// x used to covert back to int form.
+int x;
 
 int main()
 {
-    //10 bucks 
+    //You have $10
+    //change the balance to receive diffrent money change
     balance = 10;
     //coin variables
     dollars = 0;
@@ -24,35 +27,37 @@ int main()
     dimes = 0;
     nickles = 0;
     pennies = 0;
-    //leftover change variable
-    change = 0.00;
-
+    
     for (int i = 0; i < 5; i++)
     {
         price[i];
         change = balance - price[i];
-        //form = change;
+        //x = the total chnage without decimal form(0.00)
+        x = change*100;
 
-        double x;
-        
         cout <<"You bought a: "<< ItemNames[i] << endl;
         cout << "Which costed: " << price[i] << endl;
         cout << "You payed with: " << balance << endl;
         cout << "Your change total is: " << change << endl;
-        cout << "---------------------------" << endl;
+        cout << "----------------------------" << endl;
 
-        x = change *100 ;
+        //NOTE: Cant use a double, or float variable with the % operator 
 
         cout << "Here is your change in: " << endl;
-        cout << dollars << " Dollars" << endl;
+        cout << dollars << x/100 << " Dollars" << endl;
+        //calculate remiander after dollars
+        x = x%100;
         cout << quarters << x/25 << " Quarters" << endl;
+        ////calculate remiander after quarters
+        x = x%25;
         cout << dimes << x/10 << " Dimes" << endl;
+        //calculate remiander after dimes
+        x = x%10;
         cout << nickles << x/5 << " Nickles" << endl;
+        //calculate remiander after nickles
+        x = x%5;
         cout << pennies << x/1 <<" Pennies" << endl;
-        
+        cout << "--------------------------" << endl;
+        cout << "--------------------------" << endl;
     }
-
-    //cout << ((double) a / 2); // typecasting
-    
-    
 }
