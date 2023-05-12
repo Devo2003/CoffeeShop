@@ -21,7 +21,7 @@ int main()
     //You have $10
     //change the balance to receive diffrent money change
     balance = 10;
-    //coin variables
+    //dollar/coin variables
     dollars = 0;
     quarters = 0;
     dimes = 0;
