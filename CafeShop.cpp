@@ -32,7 +32,7 @@ int main()
     {
         price[i];
         change = balance - price[i];
-        //x = the total chnage without decimal form(0.00)
+        //x = the total change without it being in decimal form(0.00)
         x = change*100;
 
         cout <<"You bought a: "<< ItemNames[i] << endl;
